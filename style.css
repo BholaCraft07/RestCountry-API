@@ -1,0 +1,182 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans PhagsPa', sans-serif;
+}
+
+header{
+    width: 100%;
+    background:rgb(253, 253, 253) ;
+    /* position: fixed; */
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    max-width:1200 ;
+    /* z-index: 10; */
+}
+.container{
+    width: 90%;
+    margin-inline: auto ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding:30px 0;
+    
+}
+section{
+    margin: 40px auto
+}
+/* for creating card */
+.country-container {
+    margin-inline:auto;
+    max-width: 1200;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;  
+    gap: 53px;
+    width: 90%;
+
+}
+a{
+    text-decoration-line: none;
+    color:inherit;
+}
+.country-card{
+    display:inline-block;
+    /* max-width: 0px; */
+    width: 300px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    margin-bottom:20px;
+}
+.imageStore{
+    width:300px;
+    height: 200px;
+    overflow: hidden;
+}
+.country-card img{
+    width: 100%;
+}
+.country-card:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2);
+}
+.content{
+    padding:10px 20px;
+    line-height: 2rem;
+    text-align: start;
+}
+.content h2{
+    margin: 10px auto;
+}
+
+
+
+.pagination-btn {
+    padding: 10px 20px;
+    margin: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    display: inline;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 480px) {
+    
+    .container{
+        width: 90%;
+        margin-inline: auto ;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* gap: 50px; */
+        padding:20px 0;
+        
+    }
+    .container h2{
+        font-size: 1.3rem;
+    }
+    .moon span{
+        font-size: 1.5rem;
+    }
+    /* for creating card */
+    .country-container {
+        width: 90%;
+    }
+    a{
+        text-decoration-line: none;
+        color:inherit;
+    }
+    .country-card{
+        display:inline-block;
+        /* max-width: 0px; */
+        width: 400px;
+        height: 450px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+        margin: 10px 10px;
+
+    }
+    .imageStore{
+        width:100%;
+        overflow: hidden;
+    }
+    .country-card img{
+        width: 100%;
+    }
+    .country-card:hover{
+        transform: scale(1.03);
+        box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2);
+    }
+    .content h2{
+        margin: 20px auto;
+        font-size: 2rem;
+    }
+    
+    
+}
+
+/* Add this to your existing CSS file */
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    /* color: #ffffff; Light text */
+}
+
+.container .dark-mode {
+    background-color: #333; /* Dark background */
+    color: #ffffff; /* Light text */
+}
+
+.country-card.dark-mode {
+    background: #2c2c2c; /* Dark card background */
+    /* color: #010000; Light text in cards */
+}
+
+.pagination-btn.dark-mode {
+    background-color: #007bff; /* Button color */
+    color: white; /* Button text color */
+}
+
+/* Add any other styles you want to change in dark mode */
